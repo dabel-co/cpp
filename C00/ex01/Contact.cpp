@@ -14,41 +14,17 @@ void    Contact::print(std::string text) const
 
 void    Contact::print_contact() const
 {
+    std::cout << "First name : ";
     Contact::print(first_name);
+    std::cout << "Last name : ";
     Contact::print(last_name);
+    std::cout << "Nickname : ";
     Contact::print(nickname);
+    std::cout << "Phone number : ";
     Contact::print(phone_number);
+    std::cout << "Darkest Secret : ";
     Contact::print(darkest_secret);
 }
-
-
-
-void Contact::add()
-{
-    Contact entry;
-    std::string input;
-    std::cout << "Set first name: ";
-    getline(std::cin, input);
-    this->first_name=input;
-    std::cout << "Set last name: ";
-    getline(std::cin, input);
-    this->last_name=input;
-    std::cout << "Set nickname: ";
-    getline(std::cin, input);
-    this->nickname=input;
-    std::cout << "Set phone number: ";
-    getline(std::cin, input);
-    this->phone_number=input;
-    std::cout << "Set darkest secret: ";
-    getline(std::cin, input);
-    this->darkest_secret=input;
-
-}
-
-
-
-
-
 
 std::string Contact::get_first_name(void) const
 {

@@ -6,7 +6,6 @@ class Contact {
 public :
     Contact();
     ~Contact();
-    void add(void);
     void    print_contact(void) const;
     void    print(std::string text) const;
 
@@ -31,4 +30,11 @@ private :
     std::string nickname;
     std::string phone_number;
     std::string darkest_secret;
+};
+class PhoneBook{
+
+public :
+    
+private :
+    Contact entry[8];
 };

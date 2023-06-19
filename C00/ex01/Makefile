@@ -1,5 +1,5 @@
 NAME = phoneBook
-FLAGS = -Wall -Werror -Wextra -std=c++98
+FLAGS = -std=c++98 #-Wall -Werror -Wextra
 CPP = c++
 FILES =	Contact.cpp \
 		PhoneBook.cpp \
