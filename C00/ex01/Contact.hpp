@@ -34,7 +34,7 @@ private :
 class PhoneBook{
 
 public :
-    
-private :
     Contact entry[8];
+private :
+
 };
