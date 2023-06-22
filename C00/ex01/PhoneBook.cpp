@@ -3,12 +3,11 @@
 
 std::string format_text(std::string input)
 {
-int i;
-int len;
+int i = 0;
+int len = 0;
 int aux = 0;
 std::string result;
 result.resize(10);
-i = 0;
 while(input[len])
     len++;
 if (len > 10)
@@ -40,11 +39,13 @@ return (result);
 
 }
 
-void search_contact(Contact entry[8], int contact_count)
+void search_contact(Contact entry[8], int contact_count, int full)
 {
     int i;
     i = 0;
     std::string aux;
+    if (full == 1)
+        contact_count = 8;
     std::cout << "     index|first_name|  lastname|  nickname|" << std::endl;
     while (contact_count > i)
     {
@@ -60,7 +61,13 @@ void search_contact(Contact entry[8], int contact_count)
     std::cout << "Select a contact : ";
     getline(std::cin, aux);
     i = atoi(aux.c_str());
-    entry[i].print_contact();
+    if (i >= 0 && i < contact_count)
+        entry[i].print_contact();
+    else
+    {
+       std::cout << "Invalid output" << std::endl;
+        return ;
+    }
 
 }
 Contact add_contact(void)
@@ -90,6 +97,7 @@ int main()
     std::string command;
    
     int i = 0;
+    int full = 0;
     PhoneBook book;
     std::cout << "Welcome to the PhoneBook! Please select one of the following options" << std::endl;
     std::cout << "add : add a contact" << std::endl;
@@ -101,17 +109,21 @@ int main()
     {
         if (command == "add")
         {
-            book.entry[0] = add_contact();
+            book.entry[i] = add_contact();
             i++;
         }
         else if (command == "search")
-            search_contact(book.entry, i);
+            search_contact(book.entry, i, full);
         else if (command == "exit")
             break;
         else
             std::cout << "Invaled argument" << std::endl;
         if (i == 8)
+        {
             i = 0;
+            full = 1;
+        }
+            
         std::cout << "Enter a command :";
         getline(std::cin, command);
     }
