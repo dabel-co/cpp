@@ -10,3 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+#include <iostream>
+int main()
+{
+   Zombie x("pedro");
+    x.announce();
+    Zombie *r = newZombie("ramon");
+    r->announce();
+    delete r;
+    return(0);
+}
