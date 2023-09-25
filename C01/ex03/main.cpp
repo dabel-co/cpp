@@ -1,4 +1,5 @@
-#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
@@ -18,4 +19,4 @@ int main()
 		jim.attack();
 	}
     return 0;
-}
+} 

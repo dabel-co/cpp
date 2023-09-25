@@ -1,10 +1,12 @@
+#include <iostream>
 
-class Weapon{
+class Weapon {
     public :
-        getType();
-        setType(std::string type);
+        Weapon(std::string type);
+        ~Weapon(void);
+        const   std::string &getType();
+        void    setType(std::string type);
 
     private :
         std::string type;
-
-};
+};  
