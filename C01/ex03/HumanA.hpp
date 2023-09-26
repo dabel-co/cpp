@@ -4,7 +4,7 @@ class HumanA {
     public :
         HumanA(std::string name, Weapon &weapon);
         ~HumanA(void);
-        HumanA  attack(void);
+        void    attack(void);
 
     private :
         std::string name;
