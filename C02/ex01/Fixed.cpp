@@ -9,12 +9,13 @@ Fixed::Fixed() : fixedPointValue(0)
 
 Fixed::Fixed(const int value)
 {
-    assert(value < 8388608);
-    assert(value > -8388609);
     this->fixedPointValue = value << fractionalBits;
 }
 
-
+Fixed::Fixed(const float value)
+{
+    this->fixedPointValue = roundf(value * (1 << fractionalBits));
+}
 
 Fixed::~Fixed()
 {
@@ -53,6 +54,17 @@ float Fixed::toFloat(void) const
     result = (float)fixedPointValue;
     result = result / (1 << fractionalBits);
     return(result);
+}
+
+int Fixed::toInt(void) const
+{
+    int result;
+    result = fixedPointValue >> fractionalBits;
+    if (fixedPointValue < 0)
+        result = result | 0xFF000000;
+    else
+        result = result & 0x00FFFFFF;
+    return (result);
 }
 
 std::ostream & operator<<(std::ostream & o, Fixed const & rhs)
