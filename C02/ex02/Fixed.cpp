@@ -4,7 +4,7 @@
 
 Fixed::Fixed() : fixedPointValue(0)
 {
-    std::cerr << "Default Constructor called of Fixed" << std::endl; //ceer as que lo manda sin usar pipes para debug
+   // std::cerr << "Default Constructor called of Fixed" << std::endl; //ceer as que lo manda sin usar pipes para debug
 }
 
 Fixed::Fixed(const int value)
@@ -19,12 +19,12 @@ Fixed::Fixed(const float value)
 
 Fixed::~Fixed()
 {
-    std::cerr << "Destructor called of Fixed" << std::endl;
+  //  std::cerr << "Destructor called of Fixed" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &fixed)
 {
-    std::cerr << "Copy Constructor called of Fixed" << std::endl;
+   // std::cerr << "Copy Constructor called of Fixed" << std::endl;
     this->fixedPointValue = fixed.fixedPointValue; //como es la misma clase, accedo directamente
 }
 
@@ -113,26 +113,25 @@ Fixed Fixed::operator+(const Fixed &rhs) const
 
 Fixed Fixed::operator-(const Fixed &rhs) const
 {
-    Fixed aux(rhs);
+    Fixed aux(*this);
 
-    aux.fixedPointValue -= this->fixedPointValue;
+    aux.fixedPointValue -= rhs.fixedPointValue;
     return (aux);
 }
 
-Fixed Fixed::operator*(const Fixed &rhs) const //test this
+Fixed Fixed::operator*(const Fixed &rhs) const
 {
     Fixed aux(rhs);
 
-    //aux.fixedPointValue *= this->fixedPointValue;
     aux.fixedPointValue = (this->fixedPointValue * rhs.fixedPointValue) >> fractionalBits;
     return (aux);
 }
 
 Fixed Fixed::operator/(const Fixed &rhs) const
 {
-    Fixed aux(rhs);
+    Fixed aux(*this);
 
-    aux.fixedPointValue /= this->fixedPointValue;
+    aux.fixedPointValue = (aux.fixedPointValue << fractionalBits) / (rhs.fixedPointValue);
     return (aux);
 }
 
@@ -142,11 +141,11 @@ Fixed & Fixed::operator++(void)
     return (*this);
 }
 
-Fixed Fixed::operator++(int n)
+Fixed Fixed::operator++(int)
 {
     Fixed aux(*this);
 
-    this->fixedPointValue += n;
+    this->fixedPointValue += 1;
     return (aux);
 }
 
@@ -156,11 +155,11 @@ Fixed & Fixed::operator--(void)
     return (*this);
 }
 
-Fixed Fixed::operator--(int n)
+Fixed Fixed::operator--(int)
 {
     Fixed aux(*this);
 
-    this->fixedPointValue -= n;
+    this->fixedPointValue -= 1;
     return (aux);
 }
 

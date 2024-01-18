@@ -1,6 +1,7 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 #include <ostream>
+#include <cmath>
 
 class Fixed{
 public : 
@@ -25,7 +26,7 @@ public :
     Fixed operator*(const Fixed &rhs)   const;
     Fixed operator/(const Fixed &rhs)   const;
     Fixed &operator++(void); //++i
-    Fixed operator++(int n); //i++ & i += 5
+    Fixed operator++(int n); //i++
     Fixed &operator--(void); //--i
     Fixed operator--(int n); //i--
 
