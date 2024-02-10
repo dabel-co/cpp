@@ -31,3 +31,21 @@ void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
 }
+
+void    ScavTrap::attack(const std::string &target)
+{
+    ClapTrap *victim = findClapTrap(target);
+    if (!victim)
+    {
+        std::cout << "target " << target << "not found" <<std::endl;
+        return ;
+    }
+    if (this->energy_points == 0)
+    {
+        std::cout << this->name << " is out of energy points" << std::endl;
+        return ;
+    }
+    this->energy_points--;
+    std::cout << "ScavTrap " << this->name << " attacks WOOOOO " << target << std::endl;
+    victim->takeDamage(this->attack_damage);
+}

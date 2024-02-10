@@ -17,7 +17,7 @@ FragTrap::FragTrap(const FragTrap &copy) :ClapTrap(copy)
 // Destructor
 FragTrap::~FragTrap()
 {
-	std::cout << "Destructor called of ScavTrap " << name << std::endl;
+	std::cout << "Destructor called of FragTrap " << name << std::endl;
 }
 
 // Operators

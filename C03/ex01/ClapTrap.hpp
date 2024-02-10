@@ -23,14 +23,15 @@ protected :
   int hit_points; //health
   int energy_points; //para atacar y para curarse
   int attack_damage; //daño del ataque
+  ClapTrap* findClapTrap(const std::string &name) const; //const es que no modifico this
+  void  addClapTrap();
   
 private:
   
   static ClapTrap* claptrap_array[];
   static const int max_claptrap = 3;
   
-  ClapTrap* findClapTrap(const std::string &name) const; //const es que no modifico this
-  void  addClapTrap();
+  
 };
 
 #endif
