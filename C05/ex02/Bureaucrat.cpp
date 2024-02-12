@@ -1,5 +1,5 @@
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "FormA.hpp"
 
 // Constructors
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name) ,grade(grade)
@@ -93,7 +93,13 @@ void Bureaucrat::operator-=(int i) //decrement
 	this->grade = this->grade + i;
 }
 
-void	Bureaucrat::signForm(Form & x)
+void	Bureaucrat::signForm(FormA & x)
 {
 	x.beSigned(*this);
+}
+
+void	Bureaucrat::executeForm(FormA const & form)
+{
+	form.execute(*this);
+	std::cout << this->get_name() << " execute " << form.get_name() << std::endl;
 }

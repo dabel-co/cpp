@@ -3,7 +3,7 @@
 
 # include <iostream>
 # include <string>
-class Form;
+class FormA;
 class Bureaucrat
 {
 	public:
@@ -30,8 +30,8 @@ class Bureaucrat
 		};
 		std::string get_name() const;
 		int	get_grade() const;
-		void	signForm(Form & x);
-		
+		void	signForm(FormA & x);
+		void	executeForm(FormA const & form);
 	private:
 		std::string name;
 		int grade;
