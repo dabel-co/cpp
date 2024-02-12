@@ -10,7 +10,6 @@ WrongCat::WrongCat() :WrongAnimal()
 
 WrongCat::WrongCat(const WrongCat &copy) :WrongAnimal(copy)
 {
-	(void) copy;
 	std::cout << "Copy Constructor called of WrongCat" << std::endl;
 }
 

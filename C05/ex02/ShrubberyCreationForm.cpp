@@ -32,7 +32,7 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreation
 void	ShrubberyCreationForm::execute(Bureaucrat & executor) const
 {
 	FormA::execute(executor);
-	std::cout << "soy el hijo jeje" << std::endl;
 	std::string filename = this->get_name() + "_shurubbery";
 	std::fstream stream(filename, std::fstream::out);
+	stream << TREE;
 }

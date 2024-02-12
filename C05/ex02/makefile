@@ -1,9 +1,9 @@
-NAME = Sign
+NAME = FormA
 CC = c++
 RM = rm -f
 FLAGS = -Wall -Werror -Wextra -std=c++98 
 
-SRCS =	main.cpp Bureaucrat.cpp Form.cpp
+SRCS =	main.cpp Bureaucrat.cpp FormA.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

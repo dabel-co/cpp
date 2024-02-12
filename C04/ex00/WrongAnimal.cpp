@@ -9,7 +9,7 @@ WrongAnimal::WrongAnimal()
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
-	(void) copy;
+	*this = copy;
 	std::cout << "Copy Constructor called of WrongAnimal" << std::endl;
 }
 

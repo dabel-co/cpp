@@ -10,7 +10,6 @@ Cat::Cat() :Animal()
 
 Cat::Cat(const Cat &copy) :Animal(copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
 }
 

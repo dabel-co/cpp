@@ -10,7 +10,6 @@ Dog::Dog() :Animal()
 
 Dog::Dog(const Dog &copy) :Animal(copy)
 {
-	(void) copy;
 	std::cout << "\e[0;33mCopy Constructor called of Dog\e[0m" << std::endl;
 }
 

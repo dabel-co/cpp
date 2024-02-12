@@ -9,7 +9,7 @@ Animal::Animal()
 
 Animal::Animal(const Animal &copy)
 {
-	(void) copy;
+	*this = copy;
 	std::cout << "Copy Constructor called of Animal" << std::endl;
 }
 

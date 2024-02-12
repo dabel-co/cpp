@@ -51,10 +51,10 @@ int main() {
      for (int i = 0; i < x; i++)
         delete animal_array[i];
     {
-     Dog j = Dog();
+    Dog j = Dog();
     j.get_brain()->set_first_idea("soy original");
     std::cout << j.get_brain()->get_first_idea() << std::endl;
-     Dog deepcopy = Dog(j);
+    Dog deepcopy = Dog(j);
     j.get_brain()->set_first_idea("woops no, soy fake");
     std::cout << j.get_brain()->get_first_idea() << std::endl;
     std::cout << deepcopy.get_brain()->get_first_idea() << std::endl;
