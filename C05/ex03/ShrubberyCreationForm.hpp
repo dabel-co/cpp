@@ -18,6 +18,7 @@ class ShrubberyCreationForm: public FormA
 		// Operators
 		ShrubberyCreationForm & operator=(const ShrubberyCreationForm &assign);
 		virtual void	execute(Bureaucrat & executor) const;
+		static FormA* createInstance(std::string target);
 	private:
 		
 		
