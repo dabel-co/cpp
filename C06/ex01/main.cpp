@@ -3,9 +3,8 @@
 int main()
 {
 
-   Data *data = new Data;
+    Data *data = new Data;
     data->value = 41;
-    data->value2 = 42.3;
     Serializer mySerial;
 
     std::cout << "data: " << data << std::endl;

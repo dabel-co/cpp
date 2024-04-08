@@ -8,7 +8,6 @@
 struct Data
 {
 	int value;
-	float value2;
 };
 
 class Serializer

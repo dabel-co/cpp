@@ -26,7 +26,8 @@ Serializer & Serializer::operator=(const Serializer &assign)
 	(void) assign;
 	return *this;
 }
-
+//uintptr_t : an unsigned integer type with the property that any valid pointer to void can be converted to this type
+//then converted back to pointer to void, and the result will compare equal to the original pointer
 uintptr_t Serializer::serialize(Data* ptr)
 {
 	return (uintptr_t)ptr;
