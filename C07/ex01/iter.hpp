@@ -9,4 +9,10 @@ void iter(X *array, int size, void(*f)(X const &))
     for (int i = 0; i < size; i++)
         f(array[i]);
 }
+template<typename X>
+void iter(X *array, int size, void(*f)(X &))
+{
+    for (int i = 0; i < size; i++)
+        f(array[i]);
+}
 #endif
