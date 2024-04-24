@@ -1,4 +1,4 @@
-**Title:** 42 C++ Piscine (C00 - C09)
+**42 C++ Piscine (C00 - C09)**
 
 **Brief Description:**
 A collection of my completed C++98 pool exercises. These projects showcase my progression in core C++ concepts and problem-solving.
