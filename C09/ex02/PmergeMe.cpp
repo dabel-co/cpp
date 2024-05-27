@@ -1,3 +1,6 @@
+#include <iostream>
+#include <vector>
+
 void group_divide(const std::vector<int>& vector, std::vector<std::pair<int, int> >& pairs)
 {
     for (size_t i = 0; i < vector.size() - 1; i += 2)

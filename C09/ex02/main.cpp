@@ -39,9 +39,12 @@ int main(int argc, char **argv)
     clock_t deque_end = clock();
     
     std::cout << "after: ";
-    for (std::deque<int>::iterator i = x.begin(); i != x.end(); i++)
+     for (std::vector<int>::iterator i = y.begin(); i != y.end(); i++)
         std::cout << *i << " ";
     std::cout << std::endl;
+    //for (std::deque<int>::iterator i = x.begin(); i != x.end(); i++)
+      //  std::cout << *i << " ";
+    //std::cout << std::endl;
     
     double vector_duration = 1000.0 * (vector_end - vector_start) / CLOCKS_PER_SEC; //time in ms
     double deque = 1000.0 * (deque_end - deque_start) / CLOCKS_PER_SEC;       //time in ms
