@@ -19,6 +19,9 @@ A collection of my completed C++98 pool exercises. These projects showcase my pr
 * **Standard Template Library (STL):**
     * Containers (vectors, lists, maps)
     * Algorithms
-    * 
-These solutions are for personal reference and learning purposes. 42 emphasizes the process of problem-solving. It is strongly advised to use these exercises as a guide and create your own original solutions. Learn, don't copy
+ 
+**Coolest things**
+   * [Merge-insertion sort](https://github.com/dabel-co/cpp/tree/main/C09/ex02)
+   * [Conversion of scalar types](https://github.com/dabel-co/cpp/tree/main/C06/ex00)
+Learn, don't copy.
  
